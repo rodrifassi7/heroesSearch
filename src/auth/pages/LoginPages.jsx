@@ -8,9 +8,11 @@ export const LoginPages = () => {
   const navigate = useNavigate();
 
   const onLogin = () => {
+
+    const lastPath = localStorage.getItem('lastPath') || '/';
     login("Rodrigo Fassi");
 
-    navigate("/", {
+    navigate(lastPath, {
       replace: true,
     });
   };
