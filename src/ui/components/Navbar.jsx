@@ -24,7 +24,7 @@ export const Navbar = () => {
         <div className="navbar-nav">
           <NavLink
             className={({ isActive }) =>
-              `nav-link nav-item ${isActive ? "active" : ""}`
+              `nav-link nav-item  ${isActive ? "active" : ""}  ${isActive ? "capricho" : ""}`
             }
             to="/marvel"
           >
@@ -33,7 +33,7 @@ export const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              `nav-link nav-item ${isActive ? "active" : ""}`
+              `nav-link nav-item  ${isActive ? "active" : ""}  ${isActive ? "capricho" : ""}`
             }
             to="/dc"
           >
@@ -42,7 +42,7 @@ export const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              `nav-link nav-item ${isActive ? "active" : ""}`
+              `nav-link nav-item ${isActive ? "active" : ""}  ${isActive ? "capricho" : ""}`
             }
             to="/search"
           >
