@@ -48,22 +48,24 @@ export const SearchPage = () => {
           <h4>Results</h4>
           <hr />
 
-          {
-            (q === '')
-            ?  <div className="alert alert-primary">Search a hero</div>
-            : ( heroes.length === 0) &&
-            <div className="alert alert-danger">
-            Theres not result <b>{q}</b>
-          </div>
-          }
-
-         
-
-          
+          {q === "" ? (
+            <div className="alert alert-primary">Search a hero</div>
+          ) : (
+            heroes.length === 0 && (
+              <div className="alert alert-danger">
+                Theres not result <b>{q}</b>
+              </div>
+            )
+          )}
         </div>
 
         {heroes.map((hero) => (
-          <HeroCard key={hero.id} {...hero} />
+          <div 
+           key={hero.id}
+           className="col col-6 my-2"
+           >
+            <HeroCard {...hero} />
+          </div>
         ))}
       </div>
     </>
